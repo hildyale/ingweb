@@ -50,4 +50,23 @@ public class CiudadDaoImplTest {
 		
 	}
 	
+	@Test
+	public void agregarUna() {
+		
+		ciudadDao ciudadDao = null;
+		Ciudad ciudad = null;
+		
+		
+		try{
+			ciudadDao = new CiudadDaoImpl();
+			ciudad = ciudadDao.obtener(1);
+			assertTrue(ciudad!=null);
+			
+		}catch(ClaseExceptionDao e){
+			fail(e.getMessage());
+			
+		}
+		
+	}
+	
 }
