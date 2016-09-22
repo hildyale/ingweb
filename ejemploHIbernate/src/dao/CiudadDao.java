@@ -13,5 +13,13 @@ import java.util.List;;
 public interface CiudadDao {
 	
 	public List<Ciudad> obtener() throws MyDaoException;
+	
+	public Ciudad obtenerUna(String codigo) throws MyDaoException;
+	
+	public void guardar(Ciudad ciudad) throws MyDaoException;
+	
+	public void modificar(Ciudad ciudad) throws MyDaoException;
+	
+	public void eliminar(String codigo) throws MyDaoException;
 
 }

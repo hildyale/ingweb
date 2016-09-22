@@ -13,6 +13,8 @@
     <property name="show_sql">true</property>
     
     <mapping resource="mapping/Ciudad.hbm.xml"></mapping>
+    <mapping resource="mapping/Rol.hbm.xml"></mapping>
+    <mapping resource="mapping/Usuario.hbm.xml"></mapping>
     
     </session-factory>
 </hibernate-configuration>
