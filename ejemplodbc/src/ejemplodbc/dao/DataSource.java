@@ -33,7 +33,7 @@ private DataSource(){
 		try {
 			
 			Class.forName("com.mysql.jdbc.Driver");
-			connection = (Connection) DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/clase","root","root");
+			connection = (Connection) DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/clase","root","");
 			
 		} catch (ClassNotFoundException e) {
 			// TODO Auto-generated catch block

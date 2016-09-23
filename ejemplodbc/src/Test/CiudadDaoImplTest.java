@@ -69,4 +69,26 @@ public class CiudadDaoImplTest {
 		
 	}
 	
+	@Test
+	public void testGuardarCiudad(){
+		ciudadDao ciudadDao = null;
+		Ciudad ciudad = null;
+		
+		try{
+			
+			ciudad = new Ciudad();
+			ciudad.setCodigo("12");
+			ciudad.setNombre("Venecia");
+			ciudad.setCodigoArea("071");
+			
+			ciudadDao = new CiudadDaoImpl();	
+			ciudadDao.guardar(ciudad);		
+			//Establece si la prueba fue satisfactoria
+			assertTrue(true);
+		}catch(ClaseExceptionDao e){
+			e.printStackTrace();
+			fail(e.getMessage());
+		}
+	}
+	
 }

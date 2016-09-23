@@ -2,6 +2,11 @@ package ejemplodbc.exception;
 
 public class ClaseExceptionDao extends Exception {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
 	public ClaseExceptionDao() {
 		super();
 		// TODO Auto-generated constructor stub

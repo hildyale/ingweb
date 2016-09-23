@@ -103,5 +103,41 @@ public class CiudadDaoImpl implements ciudadDao {
 		
 		return resultado;
 	}
+	
+	@Override 
+	public void guardar(Ciudad ciudad) throws ClaseExceptionDao{
+		Connection c = null;
+		PreparedStatement ps = null;
+		
+		try {
+			c = DataSource.getInstance().getConnection();
+			//meter en ps param codigo puede provocar sql injection
+			ps = c.prepareStatement("INSERT INTO ciudades (codigo, Nombre,CodigoArea) VALUES(?,?,?)");
+			//esto evita el sqlinjection
+			ps.setString(1, ciudad.getCodigo());
+			ps.setString(2, ciudad.getNombre());
+			ps.setString(3, ciudad.getCodigoArea());
+			
+			ps.execute();
+			
+		}catch(SQLException e){
+			throw new ClaseExceptionDao(e);
+		}finally {
+			//Se cierran todas las conexiones solo si no son nulas
+			try {	
+				if(ps!=null)
+					ps.close();
+				
+				if(c != null)
+					c.close();
+			} catch (SQLException e2) {
+			throw new ClaseExceptionDao(e2);					
+			}
+		}
+		
+		
+	}
 
 }
+
+

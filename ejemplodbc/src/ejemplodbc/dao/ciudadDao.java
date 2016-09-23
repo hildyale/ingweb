@@ -21,4 +21,6 @@ public interface ciudadDao {
 	
 	public Ciudad obtener(int codigo) throws ClaseExceptionDao;
 
+	void guardar(Ciudad ciudad) throws ClaseExceptionDao;
+
 }
