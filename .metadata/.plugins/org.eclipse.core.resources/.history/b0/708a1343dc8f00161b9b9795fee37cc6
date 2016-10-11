@@ -1,0 +1,14 @@
+package co.edu.udea.logica;
+
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+public class ClienteB1implTest {
+
+	@Test
+	public void testCrearCliente() {
+		fail("Not yet implemented");
+	}
+
+}

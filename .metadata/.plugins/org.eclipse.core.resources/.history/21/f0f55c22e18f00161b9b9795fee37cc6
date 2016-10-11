@@ -1,0 +1,32 @@
+package co.edu.udea.logica;
+
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+import org.springframework.beans.factory.annotation.Autowired;
+
+import co.edu.udea.iw.dto.Cliente;
+import co.edu.udea.iw.exception.MyDaoException;
+
+public class ClienteB1implTest {
+
+	@Autowired
+	Clienteb1 clienteb1;
+	
+	@Test
+	public void testCrearCliente() {
+		try{
+			String a = "alejo";
+			String b = "alejo";
+			String c = "alejo";
+			String d = "alejo";
+			String e = "alejo";
+			
+			clienteb1.crearCliente(a,b,c,d,e);
+		}catch(MyDaoException | NullPointerException e){
+			fail(e.getMessage());
+		}
+		
+	}
+
+}

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="co.edu.udea.iw.dao.ClienteDao"/>
+<fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Autowired"/>
+<fullyQualifiedTypeName name="co.edu.udea.iw.dto.Cliente"/>
+<fullyQualifiedTypeName name="java.lang.NullPointerException"/>
+<fullyQualifiedTypeName name="co.edu.udea.iw.dao.UsuarioDao"/>
+<fullyQualifiedTypeName name="co.edu.udea.iw.dto.Usuario"/>
+<fullyQualifiedTypeName name="co.edu.udea.iw.exception.MyDaoException"/>
+<fullyQualifiedTypeName name="java.util.Date"/>
+</qualifiedTypeNameHistroy>

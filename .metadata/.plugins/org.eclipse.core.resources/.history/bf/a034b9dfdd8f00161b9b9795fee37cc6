@@ -1,0 +1,15 @@
+package co.edu.udea.logica;
+
+import co.edu.udea.iw.dto.Cliente;
+import co.edu.udea.iw.exception.MyDaoException;
+
+/**
+ * 
+ * @author estudiantelis
+ *
+ */
+public interface Clienteb1 {
+	
+	public void crearCliente(Cliente cliente) throws MyDaoException;
+
+}

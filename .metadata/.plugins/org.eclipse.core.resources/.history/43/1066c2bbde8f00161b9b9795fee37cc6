@@ -1,0 +1,37 @@
+package co.edu.udea.logica;
+
+import co.edu.udea.iw.dao.ClienteDao;
+import co.edu.udea.iw.dto.Cliente;
+import co.edu.udea.iw.exception.MyDaoException;
+
+public class ClienteB1impl implements Clienteb1 {
+	
+	ClienteDao clienteDao;
+	
+	public ClienteB1impl(ClienteDao clienteDao) {
+		this.clienteDao = clienteDao;
+	}
+
+	@Override
+	public void crearCliente(String cedula,String nombres,String apellidos,String email,String usuarioCrea) throws MyDaoException{
+			
+			if (cedula == null || "".equals(cedula.trim())) {
+				throw new NullPointerException("Debe especificar la cedula del cliente.");
+	        }
+			if (nombres == null || "".equals(nombres.trim())) {
+				throw new NullPointerException("Debe especificar la nombres del cliente.");
+	        }
+			if (apellidos == null || "".equals(apellidos.trim())) {
+				throw new NullPointerException("Debe especificar la apellidos del cliente.");
+	        }
+			if (email == null || "".equals(email.trim())) {
+				throw new NullPointerException("Debe especificar la email del cliente.");
+	        }
+			if (usuarioCrea == null || "".equals(usuarioCrea.trim())) {
+				throw new NullPointerException("Debe especificar la usuarioCrea del cliente.");
+	        }
+
+		clienteDao.guardar(cliente);
+	}
+
+}

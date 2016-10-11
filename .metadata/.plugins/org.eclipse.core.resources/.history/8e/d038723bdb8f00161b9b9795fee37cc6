@@ -1,0 +1,21 @@
+package co.edu.udea.logica;
+
+import co.edu.udea.iw.dao.ClienteDao;
+import co.edu.udea.iw.dto.Cliente;
+import co.edu.udea.iw.exception.MyDaoException;
+
+public class ClienteB1impl implements Clienteb1 {
+	
+	ClienteDao clienteDao;
+	
+	public public ClienteB1impl(ClienteDao clientedao) {
+		this.clienteDao = clientedao
+	}
+
+	@Override
+	public void crearCliente(Cliente cliente) throws MyDaoException {
+		// TODO Auto-generated method stub
+
+	}
+
+}

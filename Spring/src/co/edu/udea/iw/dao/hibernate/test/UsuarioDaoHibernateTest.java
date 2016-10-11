@@ -1,0 +1,56 @@
+package co.edu.udea.iw.dao.hibernate.test;
+
+import static org.junit.Assert.*;
+
+import java.util.List;
+import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.test.context.ContextConfiguration;
+import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+import co.edu.udea.iw.dao.UsuarioDao;
+import co.edu.udea.iw.dto.Usuario;
+import co.edu.udea.iw.exception.MyDaoException;
+
+@RunWith(SpringJUnit4ClassRunner.class)
+@ContextConfiguration(locations={"classpath:spring_config.xml"})
+
+public class UsuarioDaoHibernateTest {
+	
+	@Autowired
+	UsuarioDao dao;
+
+	@Test
+	public void testObtener() {
+		List<Usuario> resultado = null;
+		
+		try {
+			resultado = dao.obtener();
+			
+			for (Usuario usuario : resultado) {
+				System.out.println("Nombre Usuario: " + usuario.getNombres());
+				//Si no se pregunta explicitamente por el Rol, Hibernate no hace la busqueda en la tabla
+				System.out.println("Rol: " + usuario.getRol().getNombre());
+			}
+			
+			assertTrue(resultado.size() > 0);
+		} catch (MyDaoException e) {
+			e.printStackTrace();
+			fail(e.getMessage());
+		}
+
+	}
+
+	@Test
+	public void testObtenerString() {
+		try {
+			Usuario user = new Usuario();
+			user = dao.obtener("elver");
+			System.out.println("apellidos : "+user.getApellidos() );
+
+		} catch (MyDaoException e) {
+			e.printStackTrace();
+		}
+	}
+
+}

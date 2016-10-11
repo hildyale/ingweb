@@ -1,0 +1,18 @@
+package co.edu.udea.logica;
+
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+import org.springframework.beans.factory.annotation.Autowired;
+
+public class ClienteB1implTest {
+
+	@Autowired
+	ClienteB1 clienteB1
+	
+	@Test
+	public void testCrearCliente() {
+		fail("Not yet implemented");
+	}
+
+}
